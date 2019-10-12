@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: springbootecommerce
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: springbootecommerce
+    spec:
+      containers:
+      - name: springbootecommerce
+        image: 842989587220.dkr.ecr.ap-south-1.amazonaws.com/springbootecommerce:latest
+        ports:
+        - containerPort: 9080
